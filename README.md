@@ -1,4 +1,4 @@
-Which AI agent you use?
+Which AI agent did you use?
 -github copilot
 
 What prompts did you use?
