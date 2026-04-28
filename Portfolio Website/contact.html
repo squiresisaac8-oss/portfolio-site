@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--navigation-->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!--contact-->
+  <section>
+    <h1>Contact</h1>
+    <ul id="contact-info"></ul>
+
+    <h2>Send a Message</h2>
+    <p id="form-success" style="display:none; color:green;">Message sent successfully!</p>
+
+    <div class="form-group">
+      <label for="f-name">Full Name *</label><br/>
+      <input type="text" id="f-name" placeholder="Your name" /><br/>
+      <span class="form-error" id="err-name">Please enter your name.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="f-email">Email *</label><br/>
+      <input type="email" id="f-email" placeholder="you@email.com" /><br/>
+      <span class="form-error" id="err-email">Please enter a valid email.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="f-message">Message *</label><br/>
+      <textarea id="f-message" placeholder="Your message here..."></textarea><br/>
+      <span class="form-error" id="err-message">Please enter a message.</span>
+    </div>
+
+    <button onclick="submitForm()">Send Message</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    renderContact();
+  </script>
+</body>
+</html>

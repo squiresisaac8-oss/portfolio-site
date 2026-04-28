@@ -1,0 +1,246 @@
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Modern CSS Reset */
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+ }
+ 
+/* Navigation */
+ nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+ }
+ 
+ nav a {
+  color: #2c3e50;
+   text-decoration: none;
+  margin-right: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+ }
+ 
+ nav a:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-1px);
+ }
+ 
+/* Sections */
+ section {
+  background: white;
+  margin: 0 2rem 2rem;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+ }
+ 
+ h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+ }
+ 
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #34495e;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #34495e;
+  margin: 1.5rem 0 1rem;
+ }
+ 
+/* Gallery */
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+ #gallery-grid img {
+  width: 100%;
+  height: 180px;
+   object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+ }
+ 
+/* Cards */
+ .course-card, .project-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.course-card:hover, .project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+ }
+ 
+/* Forms */
+ .form-group {
+  margin-bottom: 1.5rem;
+ }
+ 
+ input, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+ }
+ 
+ textarea {
+  height: 120px;
+  resize: vertical;
+ }
+ 
+/* Buttons */
+ button {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+   color: white;
+   border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+ }
+ 
+ button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Lists */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+ }
+ 
+/* Error messages */
+ .form-error {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+   display: none;
+ }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  nav {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  nav a {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  section {
+    margin: 0 1rem 1rem;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  input, textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
